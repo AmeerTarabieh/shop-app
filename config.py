@@ -1,0 +1,4 @@
+STORE_NAME = "Shop App"
+PRICE = 100
+CURRENCY = "ILS"
+
