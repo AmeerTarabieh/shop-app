@@ -1,4 +1,4 @@
-STORE_NAME = "Shop App"
-PRICE = 90
+STORE_NAME = "Shop App"D
+PRICE = 110
 CURRENCY = "ILS"
 
