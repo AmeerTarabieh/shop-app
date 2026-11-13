@@ -54,3 +54,25 @@ jobs:
             cat coverage.md >> "$GITHUB_STEP_SUMMARY"
           fi
 
+
+  security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install security tools
+        run: python -m pip install bandit pip-audit
+
+      - name: Bandit security scan
+        run: bandit -r . -x ./tests
+
+      - name: Dependency vulnerability scan
+        run: pip-audit -r requirements.txt
+ 
