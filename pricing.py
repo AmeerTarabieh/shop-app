@@ -1,5 +1,6 @@
 """Price helpers for Shop App. All prices are in ILS."""
 
+# Pre-commit formatting test
 VAT_RATE = 0.18
 
 
