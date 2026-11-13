@@ -22,6 +22,7 @@ def cart_total(prices):
 
 FREE_SHIPPING_MIN = 200
 
+
 def shipping_cost(total):
     """Return the shipping cost in ILS. Free from 200 ILS."""
     if total >= FREE_SHIPPING_MIN:
