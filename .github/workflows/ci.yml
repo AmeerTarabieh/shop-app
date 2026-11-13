@@ -21,4 +21,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run tests
-        run: python -m pytest -v
+        run: python -m pytest -v --cov=pricing --cov-report=term-missing --cov-report=markdown:coverage.md --cov-fail-under=90
+   
+      - name: Coverage summary
+        if: always()
+        run: cat coverage.md >> "$GITHUB_STEP_SUMMARY"  
